@@ -1,0 +1,15 @@
+resources:
+- name: addition-git
+  type: git
+  source:
+    uri: https://github.com/lukemueller/concourse-example.git
+    branch: master
+    path: [/addition]
+
+jobs:
+- name: junit
+  plan:
+  - get: addition-git
+    trigger: true
+  - task: unit-test
+    file: addition-git/ci/unit-test.yml
