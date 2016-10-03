@@ -1,0 +1,5 @@
+rootProject.name = 'concourse-example'
+
+include 'calculator'
+include 'addition'
+

@@ -1,0 +1,19 @@
+group 'org.luke'
+version '1.0-SNAPSHOT'
+jar {
+    baseName = 'calculator'
+}
+
+apply plugin: 'spring-boot'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+}
