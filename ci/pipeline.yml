@@ -1,14 +1,14 @@
 resources:
-- name: addition-git
+- name: concourse-example
   type: git
   source:
     uri: https://github.com/lukemueller/concourse-example.git
     branch: master
 
 jobs:
-- name: junit
+- name: addition-unit
   plan:
-  - get: addition-git
+  - get: concourse-example
     trigger: true
-  - task: unit-test
-    file: addition-git/ci/unit-test.yml
+  - task: unit
+    file: concourse-example/ci/unit.yml
