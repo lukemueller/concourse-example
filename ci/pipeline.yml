@@ -10,5 +10,7 @@ jobs:
   plan:
   - get: concourse-example
     trigger: true
-  - task: unit
-    file: concourse-example/ci/tasks/unit.yml
+  - task: unit-addition
+    file: concourse-example/ci/tasks/unit-addition.yml
+  - task: unit-calculator
+    file: concourse-example/ci/tasks/unit-calculator.yml

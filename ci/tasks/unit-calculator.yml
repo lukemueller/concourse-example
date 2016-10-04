@@ -1,0 +1,19 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: openjdk
+
+inputs:
+- name: concourse-example
+- name: artifacts
+
+run:
+  path: "concourse-example/gradlew"
+  args: ["--build-file", "concourse-example/build.gradle", "--settings-file", "concourse-example/settings.gradle", "calculator:clean", "calculator:test", "calculator:build"]
+
+params:
+  TERM: -dumb
+  GRADLE_OPTS: -Dorg.gradle.native=false
