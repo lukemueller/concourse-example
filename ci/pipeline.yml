@@ -18,5 +18,7 @@ jobs:
   plan:
   - get: concourse-example
     passed: [unit-addition]
+    trigger: true
   - task: unit-calculator
     file: concourse-example/ci/tasks/unit-calculator.yml
+
