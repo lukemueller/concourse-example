@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-echo Hello World
-echo `pwd`
-echo `ls -la`
-
 pushd concourse-example
+    echo `pwd`
+    echo `ls -la`
     ./gradlew addition:clean addition:test
 popd
