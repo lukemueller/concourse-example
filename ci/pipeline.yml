@@ -4,7 +4,6 @@ resources:
   source:
     uri: https://github.com/lukemueller/concourse-example.git
     branch: master
-    path: [/addition]
 
 jobs:
 - name: junit
