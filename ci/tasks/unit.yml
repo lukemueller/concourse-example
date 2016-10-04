@@ -12,3 +12,6 @@ inputs:
 run:
   path: "concourse-example/gradlew"
   args: ["addition:clean", "addition:test"]
+
+params:
+  TERM: -dumb
