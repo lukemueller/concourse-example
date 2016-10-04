@@ -8,10 +8,13 @@ image_resource:
 
 inputs:
 - name: concourse-example
+outputs:
+- name: artifacts
+  path: concourse-example/addition/build/libs/
 
 run:
   path: "concourse-example/gradlew"
-  args: ["--build-file", "concourse-example/build.gradle", "--settings-file", "concourse-example/settings.gradle", "addition:clean", "addition:test"]
+  args: ["--build-file", "concourse-example/build.gradle", "--settings-file", "concourse-example/settings.gradle", "addition:clean", "addition:test", "addition:build"]
 
 params:
   TERM: -dumb
