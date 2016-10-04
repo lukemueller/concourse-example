@@ -10,4 +10,5 @@ inputs:
 - name: concourse-example
 
 run:
-  path: concourse-example/ci/ci.sh
+  path: "gradlew"
+  args: ["addition:clean", "addition:test"]

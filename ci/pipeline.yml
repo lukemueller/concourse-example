@@ -11,4 +11,4 @@ jobs:
   - get: concourse-example
     trigger: true
   - task: unit
-    file: concourse-example/ci/unit.yml
+    file: concourse-example/ci/tasks/unit.yml
