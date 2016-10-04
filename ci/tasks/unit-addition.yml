@@ -8,6 +8,7 @@ image_resource:
 
 inputs:
 - name: concourse-example
+
 outputs:
 - name: artifacts
   path: concourse-example/addition/build/libs/
