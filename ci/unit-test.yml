@@ -10,4 +10,4 @@ inputs:
 - name: addition-git
 
 run:
-  path: ci/ci.sh
+  path: addition-git/ci/ci.sh
