@@ -1,1 +1,3 @@
-./gradlew addition:clean addition:test
+pushd concourse-example
+    ./gradlew addition:clean addition:test
+popd
