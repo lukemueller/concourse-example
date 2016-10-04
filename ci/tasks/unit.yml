@@ -10,5 +10,5 @@ inputs:
 - name: concourse-example
 
 run:
-  path: "gradlew"
+  path: "concourse-example/gradlew"
   args: ["addition:clean", "addition:test"]
