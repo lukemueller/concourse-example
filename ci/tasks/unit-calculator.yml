@@ -8,7 +8,6 @@ image_resource:
 
 inputs:
 - name: concourse-example
-- name: artifacts
 
 run:
   path: "concourse-example/gradlew"
