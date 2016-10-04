@@ -13,3 +13,6 @@
 
 # Vagrant
 ci/.vagrant
+
+# Gradle
+.gradle/
