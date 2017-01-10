@@ -2,8 +2,8 @@ resources:
   - name: helloworld-src-git
     type: git
     source:
-      uri: https://github.com/lukemueller/helloworld
-      branch: concourse
+      uri: https://github.com/lukemueller/concourse-example
+      branch: master
 
 jobs:
   - name: test
