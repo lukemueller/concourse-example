@@ -1,6 +1,6 @@
 ---
 applications:
-- name: helloworld-dev
+- name: helloworld-dev-luke
   path: build/libs/hello-world-0.1.0.jar
   memory: 1G
   instances: 1
