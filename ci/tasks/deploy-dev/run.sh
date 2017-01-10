@@ -5,5 +5,5 @@ set -ex
 pushd helloworld-src-git
   export TERM=${TERM:-dumb}
   ./gradlew assemble
-  ./ci/cf push
+  cf push
 popd
