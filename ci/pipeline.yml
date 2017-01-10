@@ -1,24 +1,22 @@
 resources:
-- name: concourse-example
-  type: git
-  source:
-    uri: https://github.com/lukemueller/concourse-example.git
-    branch: master
+  - name: helloworld-src-git
+    type: git
+    source:
+      uri: https://github.com/lukemueller/helloworld
+      branch: concourse
 
 jobs:
-- name: unit-addition
-  plan:
-  - get: concourse-example
-    trigger: true
-  - task: unit-addition
-    file: concourse-example/ci/tasks/unit-addition.yml
-
-- name: calculator-integration
-  serial: true
-  plan:
-  - get: concourse-example
-    passed: [unit-addition]
-    trigger: true
-  - task: unit-calculator
-    file: concourse-example/ci/tasks/unit-calculator.yml
-
+  - name: test
+    plan:
+      - get: helloworld-src-git
+        trigger: true
+      - task: test
+        file: helloworld-src-git/ci/tasks/test/task.yml
+  - name: deploy-dev
+    serial: true
+    plan:
+      - get: helloworld-src-git
+        trigger: true
+        passed: [test]
+      - task: deploy-dev
+        file: helloworld-src-git/ci/tasks/deploy-dev/task.yml
