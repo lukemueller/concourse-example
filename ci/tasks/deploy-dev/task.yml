@@ -6,5 +6,8 @@ image_resource:
     repository: java
     tag: '8'
 
+inputs:
+- name: helloworld-src-git
+
 run:
   path: ./helloworld-src-git/ci/tasks/deploy-dev/run.sh
